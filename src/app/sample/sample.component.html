@@ -1,0 +1,4 @@
+<div class='box'  [ngClass]="{'highlight': selected}" >
+  <div class="sample" [ngStyle]="{'background-color':color.rgba}"></div>
+  <div *ngIf="label" class="label" >{{label}}</div>
+</div>

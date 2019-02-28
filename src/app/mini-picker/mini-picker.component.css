@@ -1,0 +1,14 @@
+
+#color-picker{
+  margin: 0px;
+  cursor: ew-resize;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+canvas{
+  display: block;
+  clear: both;
+}

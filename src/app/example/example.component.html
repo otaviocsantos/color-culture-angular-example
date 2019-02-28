@@ -1,0 +1,84 @@
+  <h2>
+  How Color Culture works
+  </h2>
+  <p>
+    A culture is like a color palette, it holds colors together:
+  </p>
+
+  <app-culture [value]="simple"></app-culture>
+  <div class="breather">
+  <p>
+    The main difference is that in a culture you may have dynamic collors. 
+  </p>
+  <p>
+    This is a culture:
+  </p>
+</div>
+  <div class='example-box breather'>
+    <div class="line">
+
+    <sample class='column' [color]="cmykSource" ></sample>
+    <h1 class='column'> + </h1>
+    <div class='column'>
+      <mini-picker #cmykPicker [color]="cmykPickerInit"  [showAlpha]="false"></mini-picker>
+      <h6>you may change the values of this modifier by dragging the bars</h6>
+    </div>
+    <h1 class='column'> = </h1>
+    <sample class='column' [color]="cmykSource.add(cmykPicker.color)" ></sample>
+  </div>
+</div>
+<div>
+  <p>
+    It has a color (yellow) and a modifier: {{cmykPicker.color.toString()}}, Color Culture then takes the first color, adds the modifier to it and generates the second color.
+  </p>
+  <p>
+    That means that if you  alter the first color or the modfier, the second color will be automatically updated.
+  </p>
+  <p>
+    You are not limited to CMYK, you may use RGB, HSL, LAB, XYZ or create your own color model.
+  </p>
+
+  <p>
+    In this example we have an LAB color, modified by an RGB color which is modified by an HSL color:
+  </p>
+</div>
+  
+<app-culture [value]="chained"></app-culture>
+
+  <div class='example-box'>
+    <div class="line">
+      <h3 >RGB</h3>
+    </div>
+    <div class="line">
+      <div class='column'>
+        <sample [color]="labSource" ></sample>
+      </div>
+      <h1 class='column'> + </h1>
+      <div class='column'>
+        <mini-picker #rgbPicker [color]="rgbPickerInit"  [showAlpha]="false" (update)="updateRGB($event)"></mini-picker>
+        <h6>you may change the values of this modifier by dragging the bars</h6>
+      </div>
+      <h1 class='column'> = </h1>
+      <sample class='column' [color]="labSource.add(rgbPicker.color)" ></sample>
+    </div>
+
+</div>
+
+
+<div class='example-box' *ngIf="chained">
+  <div class="line">
+    <h3>HSL</h3>
+  </div>
+  <div class='line'>
+    <sample class='column' [color]="chained.items[1].result" ></sample>
+    <h1 class='column'> + </h1>
+    <div class='column'>
+      <mini-picker #hslPicker [color]="hslPickerInit" (update)="updateHSL($event)" [showAlpha]="false"></mini-picker>
+      <h6>you may change the values of this modifier by dragging the bars</h6>
+    </div>
+    <h1 class='column'> = </h1>
+    <sample class='column' [color]="chained.items[2].result" ></sample>
+  </div>
+</div>
+
+      

@@ -1,0 +1,5 @@
+<div *ngIf="value" style="display: block">
+  <div class="group" *ngIf="value.items">
+    <sample *ngFor="let sample of value.items" [color]="sample.result" ></sample>
+  </div>
+</div>

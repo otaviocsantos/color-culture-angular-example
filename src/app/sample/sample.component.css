@@ -1,0 +1,16 @@
+.box{
+  /* display: block;
+  float: left; */
+}
+.sample{
+  width: 70px;
+  height: 80px;
+}
+.label{
+  font-size: 10px;
+  display: block;
+  padding-left: 4px;
+}
+.highlight{
+  border-bottom: 5px solid #a3a3a3;
+}

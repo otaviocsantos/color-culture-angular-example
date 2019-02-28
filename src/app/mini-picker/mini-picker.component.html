@@ -1,0 +1,72 @@
+<div id="color-picker">
+
+  <div id='lists'>
+
+    <div id='rgb-list' *ngIf="model==='rgb'">
+        <canvas 
+        width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,0);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,0);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,1);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,1);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,2);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,2);$event.stopPropagation()"
+        ></canvas>
+        
+            <canvas *ngIf="showAlpha" 
+        width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,3);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,3);$event.stopPropagation()"
+        ></canvas>
+    </div>
+
+    <div id='hsl-list' *ngIf="model==='hsl'">
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,0);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,0);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,1);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,1);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,2);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,2);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" *ngIf="showAlpha"
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,3);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,3);$event.stopPropagation()"
+        ></canvas>
+    </div>
+
+
+    <div id='cmyk-list' *ngIf="model==='cmyk'">
+        <canvas 
+        width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,0);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,0);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,1);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,1);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,2);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,2);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" 
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,3);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,3);$event.stopPropagation()"
+        ></canvas>
+        <canvas width="{{trackWidth}}" *ngIf="showAlpha"
+        height="{{trackHeight}}" (mousedown)="onMouseDown($event,4);$event.stopPropagation()" 
+        (mousemove)="onMouseMove($event,4);$event.stopPropagation()"
+        ></canvas>
+    </div>
+            
+  </div>
+</div>  
