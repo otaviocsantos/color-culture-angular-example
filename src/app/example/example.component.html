@@ -18,12 +18,12 @@
     <div class="line">
 
     <sample class='column' [color]="cmykSource" ></sample>
-    <h1 class='column'> + </h1>
+    <h1 class='column operator'> + </h1>
     <div class='column'>
       <mini-picker #cmykPicker [color]="cmykPickerInit"  [showAlpha]="false"></mini-picker>
       <h6>you may change the values of this modifier by dragging the bars</h6>
     </div>
-    <h1 class='column'> = </h1>
+    <h1 class='column operator'> = </h1>
     <sample class='column' [color]="cmykSource.add(cmykPicker.color)" ></sample>
   </div>
 </div>
@@ -53,12 +53,12 @@
       <div class='column'>
         <sample [color]="labSource" ></sample>
       </div>
-      <h1 class='column'> + </h1>
+      <h1 class='column operator'> + </h1>
       <div class='column'>
         <mini-picker #rgbPicker [color]="rgbPickerInit"  [showAlpha]="false" (update)="updateRGB($event)"></mini-picker>
         <h6>you may change the values of this modifier by dragging the bars</h6>
       </div>
-      <h1 class='column'> = </h1>
+      <h1 class='column operator'> = </h1>
       <sample class='column' [color]="labSource.add(rgbPicker.color)" ></sample>
     </div>
 
@@ -71,12 +71,12 @@
   </div>
   <div class='line'>
     <sample class='column' [color]="chained.items[1].result" ></sample>
-    <h1 class='column'> + </h1>
+    <h1 class='column operator'> + </h1>
     <div class='column'>
       <mini-picker #hslPicker [color]="hslPickerInit" (update)="updateHSL($event)" [showAlpha]="false"></mini-picker>
       <h6>you may change the values of this modifier by dragging the bars</h6>
     </div>
-    <h1 class='column'> = </h1>
+    <h1 class='column operator'> = </h1>
     <sample class='column' [color]="chained.items[2].result" ></sample>
   </div>
 </div>

@@ -4,6 +4,7 @@ h6{
   font-weight: 400;
   line-height: 1.4143em !important;
   margin-bottom: 0 !important;
+  margin-top: 2.0em !important;
 }
 .example-box {
     display: -ms-flexbox;
@@ -56,7 +57,11 @@ h6{
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+    padding: 0 0.2em;
 }
 .breather{
   margin-bottom: 4em;
+}
+.operator{
+  padding-top: 1em;
 }
