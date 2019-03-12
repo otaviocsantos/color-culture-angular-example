@@ -1,0 +1,28 @@
+.playground {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.desc {
+  border: 1px solid #cacaca;
+  width: 120px;
+  padding: 0 0 5px 5px;
+  margin: 0 15px 15px 0;
+}
+
+.group {
+  padding: 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  align-items: flex-start;
+}
+
+sample {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}

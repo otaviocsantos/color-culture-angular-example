@@ -1,0 +1,86 @@
+
+  <h2>Color Manipulation</h2>
+  <p>Every instance of the Color class contains commonly used functions for color manipulation.</p>
+  <pre> 
+  let color = new {{stringed}};
+  console.log(color.rgba);
+  console.log(color.lighten().rgba);
+  </pre>
+  <div class="group">
+    <sample [color]="currentColor"></sample>
+    <sample [color]="currentColor.lighten()"></sample>
+  </div>
+    <p>Modifications can also be chained.</p>
+    <pre> 
+    let color = new {{stringed}};
+    console.log(color.rgba);
+    console.log(color.darken().desaturate());
+  </pre>
+      <div class="group">
+        <sample [color]="currentColor"></sample>
+        <sample [color]="currentColor.darken().desaturate()"></sample>
+      </div>
+      <p>With the exception of negate a modification can be changed an amount.</p>
+      <pre> 
+      let color = new {{stringed}};
+      console.log(color.rgba); 
+      console.log(color.rotate(120).saturate(55));
+    </pre>
+      <div class="group">
+        <sample [color]="currentColor"></sample>
+        <sample [color]="currentColor.rotate(60).saturate(55)"></sample>
+      </div>
+      <p>
+        A modification
+        <strong>DO NOT</strong> change the original color, if you do wish to change it reassign the result of the modification like so:
+      </p>
+      <pre> 
+      let color = new {{stringed}};
+      color.negate(); // this will NOT  change the value of the variable color
+      color = color.negate(); // this will update the value of the variable color
+    </pre>
+    
+    <h3>Color manipulation playground</h3>
+
+    <div class="group">
+      <sample [color]="currentColor"></sample>
+      <mini-picker #cmykPicker [color]="currentColor" (update)="updateColor($event)"></mini-picker>
+    </div>
+    <div class="playground breather">
+      <div class="desc">
+        <h5>rotate 25&deg;</h5>
+        <sample [color]="currentColor.rotate(25)"></sample>
+      </div>
+      <div class="desc">
+        <h5>darken</h5>
+        <sample [color]="currentColor.darken()"></sample>
+      </div>
+      <div class="desc">
+        <h5>lighten</h5>
+        <sample [color]="currentColor.lighten()"></sample>
+      </div>
+      <div class="desc">
+        <h5>whiten</h5>
+        <sample [color]="currentColor.whiten()"></sample>
+      </div>
+      <div class="desc">
+        <h5>grayscale</h5>
+        <sample [color]="currentColor.grayscale()"></sample>
+      </div>
+      <div class="desc">
+        <h5>blacken</h5>
+        <sample [color]="currentColor.blacken()"></sample>
+      </div>
+      <div class="desc">
+        <h5>saturate</h5>
+        <sample [color]="currentColor.saturate()"></sample>
+      </div>
+      <div class="desc">
+        <h5>desaturate</h5>
+        <sample [color]="currentColor.desaturate()"></sample>
+      </div>
+      <div class="desc">
+        <h5>negate</h5>
+        <sample [color]="currentColor.negate()"></sample>
+      </div>
+    

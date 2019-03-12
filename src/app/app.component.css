@@ -1,7 +1,9 @@
-.box.flex {
+.main {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
 }
-.box app-example{
+.box-content{
   max-width: 960px;
 }

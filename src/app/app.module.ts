@@ -6,6 +6,7 @@ import { MiniPickerComponent } from './mini-picker/mini-picker.component';
 import { ExampleComponent } from './example/example.component';
 import { SampleComponent } from './sample/sample.component';
 import { CultureComponent } from './culture/culture.component';
+import { ColorFunctionsComponent } from './color-functions/color-functions.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CultureComponent } from './culture/culture.component';
     MiniPickerComponent,
     ExampleComponent,
     SampleComponent,
-    CultureComponent
+    CultureComponent,
+    ColorFunctionsComponent
   ],
   imports: [
     BrowserModule
