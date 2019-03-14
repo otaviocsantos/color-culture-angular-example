@@ -4,6 +4,37 @@
   display: flex;
   justify-content: center;
 }
-.box-content{
-  max-width: 960px;
+
+@media screen and (min-width: 991px) {
+
+  .box-content{
+    width: 960px;
+  }
+
 }
+
+@media screen and (max-width: 990px) {
+
+  .box-content{
+    width: 616px;
+  }
+
+}
+@media screen and (max-width: 719px) {
+
+  .box-content{
+    width: 500px;
+  }
+
+}
+
+
+@media screen and (max-width: 519px) {
+
+  .box-content{
+    width: 284px;
+  }
+
+}
+
+
