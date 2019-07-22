@@ -55,7 +55,7 @@
       </div>
       <h1 class='column operator'> + </h1>
       <div class='column'>
-        <mini-picker #rgbPicker [color]="rgbPickerInit"  [showAlpha]="false" (update)="updateRGB($event)"></mini-picker>
+        <mini-picker #rgbPicker [color]="rgbPickerInit"  [showAlpha]="false"></mini-picker>
         <h6>you may change the values of this modifier by dragging the bars</h6>
       </div>
       <h1 class='column operator'> = </h1>
@@ -65,19 +65,19 @@
 </div>
 
 
-<div class='example-box' *ngIf="chained">
+<div class='example-box' >
   <div class="line">
     <h3>HSL</h3>
   </div>
   <div class='line'>
-    <sample class='column' [color]="chained.items[1].result" ></sample>
+    <sample *ngIf="chained" class='column' [color]="chained.items[1].result" ></sample>
     <h1 class='column operator'> + </h1>
     <div class='column'>
-      <mini-picker #hslPicker [color]="hslPickerInit" (update)="updateHSL($event)" [showAlpha]="false"></mini-picker>
+      <mini-picker #hslPicker [color]="hslPickerInit" [showAlpha]="false"></mini-picker>
       <h6>you may change the values of this modifier by dragging the bars</h6>
     </div>
     <h1 class='column operator'> = </h1>
-    <sample class='column' [color]="chained.items[2].result" ></sample>
+    <sample *ngIf="chained" class='column' [color]="chained.items[2].result" ></sample>
   </div>
 </div>
 

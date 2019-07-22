@@ -6,7 +6,6 @@ import { Color, RGB, HSL, CMYK, LAB } from 'color-culture';
   templateUrl: './mini-picker.component.html',
   styleUrls: ['./mini-picker.component.css']
 })
-
 export class MiniPickerComponent implements OnDestroy {
 
   model = RGB.MODEL;

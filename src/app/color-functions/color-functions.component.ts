@@ -8,7 +8,7 @@ import { Color, CMYK } from 'color-culture';
 })
 export class ColorFunctionsComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('cmykPicker') cmykPicker;
+  @ViewChild('cmykPicker', { static: true }) cmykPicker;
   stringed = `Color('Turquoise')`;
   currentColor = new CMYK([71.42857142857143, 0, 7.142857142857142, 12.15686274509804, 1]);
   constructor() { }
