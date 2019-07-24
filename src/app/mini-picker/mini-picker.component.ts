@@ -21,8 +21,8 @@ export class MiniPickerComponent implements OnDestroy {
   @Output() update = new EventEmitter();
 
   private mousedown = false;
-  private trackHeight = 20;
-  private trackWidth = 80;
+  public trackHeight = 20;
+  public trackWidth = 80;
 
 
   fills;
